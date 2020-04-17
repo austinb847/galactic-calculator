@@ -23,13 +23,13 @@ describe('Calculator', () => {
   test('should correctly calculate the age in Venus years', () => {
     let calculator = new Calculator(20);
     const ageVenusYears = calculator.calcAgeVenusYears();
-    expect(ageVenusYears).toEqual(32);
+    expect(ageVenusYears).toEqual(32.4);
   });
 
   test('should correctly calculate the age in Mars years', () => {
     let calculator = new Calculator(20);
     const ageMarsYears = calculator.calcAgeMarsYears();
-    expect(ageMarsYears).toEqual(11);
+    expect(ageMarsYears).toEqual(10.6);
   });
 
   test('should correctly calculate the age in Jupiter years', () => {
@@ -41,7 +41,7 @@ describe('Calculator', () => {
   test('should correctly round age', () => {
     let calculator = new Calculator(20);
     const roundnum = calculator.roundNum(1.6667);
-    expect(roundNum).toEqual(1.7);
+    expect(roundnum).toEqual(1.7);
 
   });
 
