@@ -32,4 +32,10 @@ describe('Calculator', () => {
     expect(ageMarsYears).toEqual(11);
   })
 
+  test('should correctly calculate the age in Jupiter years', () => {
+    let calculator = new Calculator(20);
+    const ageJupiterYears = calculator.calcAgeJupiterYears();
+    expect(ageJupiterYears).toEqual(1.7);
+  })
+
 });
