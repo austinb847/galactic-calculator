@@ -43,11 +43,11 @@ export class Calculator {
     this.ageJupiterYears = this.calcAgeJupiterYears();
   }
 
-  calcYearsLeft(age) {
-    if (age > this.personLifeExpectancy) {
-      return age - this.personLifeExpectancy;
+  calcYearsLeft(age_on_planet) {
+    if (age_on_planet > this.personLifeExpectancy) {
+      return age_on_planet - this.personLifeExpectancy;
     } else {
-      return this.personLifeExpectancy - age;
+      return this.personLifeExpectancy - age_on_planet;
     }
   }
 }
