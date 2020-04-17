@@ -11,4 +11,9 @@ export class Calculator {
     const earth_days_age = this.calcAgeEarthDays();
     return Math.round(earth_days_age / 88); 
   }
+
+  calcAgeVenusYears() {
+    const earth_days_age = this.calcAgeEarthDays();
+    return Math.round(earth_days_age / 225);
+  }
 }
