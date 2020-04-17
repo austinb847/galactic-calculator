@@ -3,9 +3,10 @@ import { Calculator } from './../src/calculator.js';
 
 describe('Calculator', () => {
 
-  test('should correctly create a calculator object with one age input', () => {
-    let calculator = new Calculator(20);
+  test('should correctly create a calculator object with one age input and their average life expectancy in their country', () => {
+    let calculator = new Calculator(20,78);
     expect(calculator.personAge).toEqual(20);
+    expect(calculator.personLifeExpectancy).toEqual(78);
   });
 
   test('should correctly calculate the age in earth days', () => {
