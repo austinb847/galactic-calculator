@@ -46,6 +46,8 @@ export class Calculator {
   calcYearsLeft(age) {
     if (age > this.personLifeExpectancy) {
       return age - this.personLifeExpectancy;
+    } else {
+      return this.personLifeExpectancy - age;
     }
   }
 }
