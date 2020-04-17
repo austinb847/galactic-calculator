@@ -14,7 +14,11 @@ describe('Calculator', () => {
     expect(ageEarthDays).toEqual(7300);
   });
 
-
+  test('should correctly calculate the age in Mercury years', () => {
+    let calculator = new Calculator(20);
+    let ageMercuryYears = calculator.calcAgeMercuryYears();
+    expect(ageMercuryYears).toEqual(83);
+  })
 
 
 
