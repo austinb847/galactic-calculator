@@ -34,4 +34,12 @@ export class Calculator {
   roundNum(age) {
     return Math.round(age * 10) / 10;
   }
+
+  calcAllAges() {
+    this.earthDaysAge = this.calcAgeEarthDays();
+    this.ageMercuryYears = this.calcAgeMercuryYears();
+    this.ageVenusYears = this.calcAgeVenusYears();
+    this.ageMarsYears = this.calcAgeMarsYears();
+    this.ageJupiterYears = this.calcAgeJupiterYears();
+  }
 }
