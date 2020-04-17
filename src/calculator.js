@@ -9,22 +9,28 @@ export class Calculator {
 
   calcAgeMercuryYears() {
     const earth_days_age = this.calcAgeEarthDays();
-    return Math.round(earth_days_age / 88); 
+    const age = earth_days_age / 88
+    return this.roundNum(age); 
   }
 
   calcAgeVenusYears() {
     const earth_days_age = this.calcAgeEarthDays();
-    return Math.round(earth_days_age / 225);
+    const age = earth_days_age / 225
+    return this.roundNum(age);
   }
 
   calcAgeMarsYears() {
     const earth_days_age = this.calcAgeEarthDays();
-    return Math.round(earth_days_age / 687);
+    const age = earth_days_age / 687
+    return this.roundNum(age);
   }
 
   calcAgeJupiterYears() {
     const age = this.personAge / 12
-    const roundedAge = Math.round(age * 10) / 10;
-    return roundedAge;
+    return this.roundNum(age);
+  }
+
+  roundNum(age) {
+    return Math.round(age * 10) / 10;
   }
 }
