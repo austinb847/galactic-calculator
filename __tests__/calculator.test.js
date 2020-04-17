@@ -60,7 +60,15 @@ describe('Calculator', () => {
     calculator.calcAllAges();
     const mercuryYearsLeft = calculator.calcYearsLeft(calculator.ageMercuryYears);
     expect(mercuryYearsLeft).toEqual(5);
-    
+
+  });
+
+  test ('should correctly determine how many years a person has left to live on a planet', () => {
+    let calculator = new Calculator(20,78);
+    calculator.calcAllAges();
+    const marsYearsLeft = calculator.calcYearsLeft(calculator.ageMarsYears);
+    expect(marsYearsLeft).toEqual(68);
+
   });
 
 
