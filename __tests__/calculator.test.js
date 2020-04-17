@@ -18,12 +18,18 @@ describe('Calculator', () => {
     let calculator = new Calculator(20);
     const ageMercuryYears = calculator.calcAgeMercuryYears();
     expect(ageMercuryYears).toEqual(83);
-  })
+  });
 
   test('should correctly calculate the age in Venus years', () => {
     let calculator = new Calculator(20);
     const ageVenusYears = calculator.calcAgeVenusYears();
     expect(ageVenusYears).toEqual(32);
+  });
+
+  test('should correctly calculate the age in Mars years', () => {
+    let calculator = new Calculator(20);
+    const ageMarsYears = calculator.calcAgeMarsYears();
+    expect(ageMarsYears).toEqual(11);
   })
 
 });
