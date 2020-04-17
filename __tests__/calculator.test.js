@@ -30,12 +30,19 @@ describe('Calculator', () => {
     let calculator = new Calculator(20);
     const ageMarsYears = calculator.calcAgeMarsYears();
     expect(ageMarsYears).toEqual(11);
-  })
+  });
 
   test('should correctly calculate the age in Jupiter years', () => {
     let calculator = new Calculator(20);
     const ageJupiterYears = calculator.calcAgeJupiterYears();
     expect(ageJupiterYears).toEqual(1.7);
-  })
+  });
+
+  test('should correctly round age', () => {
+    let calculator = new Calculator(20);
+    const roundnum = calculator.roundNum(1.6667);
+    expect(roundNum).toEqual(1.7);
+
+  });
 
 });
