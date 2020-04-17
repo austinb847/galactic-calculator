@@ -43,7 +43,17 @@ describe('Calculator', () => {
     let calculator = new Calculator(20);
     const roundnum = calculator.roundNum(1.6667);
     expect(roundnum).toEqual(1.7);
-
   });
+
+  test('should correctly call all age methods and store them as new properties' , () => {
+    let calculator = new Calculator(20);
+    calculator.calcAllAges();
+    expect(calculator.earthDaysAge).toEqual(7300);
+    expect(calculator.ageMercuryYears).toEqual(83);
+    expect(calculator.ageVenusYears).toEqual(32.4);
+    expect(calculator.ageMarsYears).toEqual(10.6);
+    expect(calculator.ageJupiterYears).toEqual(1.7);
+  });
+
 
 });
