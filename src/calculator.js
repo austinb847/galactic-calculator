@@ -42,4 +42,10 @@ export class Calculator {
     this.ageMarsYears = this.calcAgeMarsYears();
     this.ageJupiterYears = this.calcAgeJupiterYears();
   }
+
+  calcYearsLeft(age) {
+    if (age > this.personLifeExpectancy) {
+      return age - this.personLifeExpectancy;
+    }
+  }
 }
