@@ -5,7 +5,7 @@
 ## Description
 
 _A Web app that takes a users age and average life expectancy for their demographic and calculates  
-how old they are in Mercury years, Venus years, Mars years, and Jupiter years. And then determines how many years left they have to live on each planet based on their input life expectancy :_
+how old they are in Mercury years, Venus years, Mars years, and Jupiter years. And then determines how many years left they have to live on each planet based on their input life expectancy_
   
 ## Setup/Installation Requirements
 
