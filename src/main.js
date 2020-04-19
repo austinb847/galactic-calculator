@@ -31,7 +31,7 @@ $(document).ready(function() {
     DOMSelectors.jupiter_exp.text(obj.calcYearsLeft(obj.ageJupiterYears));
   }
 
-  DOMSelectors.title_text.first().fadeIn(4000);
+  DOMSelectors.title_text.first().fadeIn(3000);
 
   DOMSelectors.title_text.click(function() {
     DOMSelectors.title_text.animate({ 
