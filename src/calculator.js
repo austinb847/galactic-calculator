@@ -31,8 +31,8 @@ export class Calculator {
     return this.roundNum(age);
   }
 
-  roundNum(age) {
-    return Math.round(age * 10) / 10;
+  roundNum(num) {
+    return Math.round(num * 10) / 10;
   }
 
   calcAllAges() {
@@ -45,9 +45,11 @@ export class Calculator {
 
   calcYearsLeft(age_on_planet) {
     if (age_on_planet > this.personLifeExpectancy) {
-      return age_on_planet - this.personLifeExpectancy;
+      const yearsPast = this.roundNum(age_on_planet - this.personLifeExpectancy);
+      return `You have lived past your life expectancy by ${yearsPast} years`;
     } else {
-      return this.personLifeExpectancy - age_on_planet;
+      const yearsLeft = this.roundNum(this.personLifeExpectancy - age_on_planet);
+      return `Based on your life expectancy for your demographic you have ${yearsLeft} years to live`;
     }
   }
 }
