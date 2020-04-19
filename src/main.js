@@ -15,6 +15,9 @@ $(document).ready(function() {
     mars_exp: $("#marsExpec"),
     age_jupiter: $("#jupiAge"),
     jupiter_exp: $("#jupiExpec"),
+    title_text: $(".title_text"),
+    form_div: $("#ageCalculator"),
+    results_div: $("#planetResults")
   };
 
   function showContent(obj) {
@@ -32,6 +35,18 @@ $(document).ready(function() {
 
   }
 
+  DOMSelectors.title_text.first().fadeIn(4000);
+
+  DOMSelectors.title_text.click(function() {
+    DOMSelectors.title_text.animate({ 
+      top: "0%",
+    }, 700 );
+    DOMSelectors.form_div.fadeIn(1000);
+
+  });
+  
+
+
   $("#ageCalculator").submit(function(event) {
     event.preventDefault();
     let userAge = parseInt($("#userAge").val());
@@ -40,6 +55,8 @@ $(document).ready(function() {
     const calc = new Calculator(userAge, userExpectancy);
     calc.calcAllAges();
     showContent(calc);
+    DOMSelectors.form_div.fadeOut(200);
+    DOMSelectors.results_div.fadeIn(200);
 
   });
 
