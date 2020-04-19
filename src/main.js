@@ -22,17 +22,13 @@ $(document).ready(function() {
 
   function showContent(obj) {
     DOMSelectors.age_mercury.text(obj.ageMercuryYears);
-    DOMSelectors.mercury_exp.text(obj.calcYearsLeft(obj.ageMercuryYears));
-    
+    DOMSelectors.mercury_exp.text(obj.calcYearsLeft(obj.ageMercuryYears)); 
     DOMSelectors.age_venus.text(obj.ageVenusYears);
     DOMSelectors.venus_exp.text(obj.calcYearsLeft(obj.ageVenusYears));
-
     DOMSelectors.age_mars.text(obj.ageMarsYears);
     DOMSelectors.mars_exp.text(obj.calcYearsLeft(obj.ageMarsYears));
-
     DOMSelectors.age_jupiter.text(obj.ageJupiterYears);
     DOMSelectors.jupiter_exp.text(obj.calcYearsLeft(obj.ageJupiterYears));
-
   }
 
   DOMSelectors.title_text.first().fadeIn(4000);
@@ -55,6 +51,7 @@ $(document).ready(function() {
     const calc = new Calculator(userAge, userExpectancy);
     calc.calcAllAges();
     showContent(calc);
+    DOMSelectors.title_text.css({ 'position' : 'relative' });
     DOMSelectors.form_div.fadeOut(200);
     DOMSelectors.results_div.fadeIn(200);
 
