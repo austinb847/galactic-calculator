@@ -2,24 +2,29 @@
 <html>
   <head>
     <title>Galactic Calculator</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <div class="container">
-      <h1>Calculate Your Age and Life Expectancy on other Planets</h1>
-
+      <div class="header">
+        <h1 class="title_text">Galactic Calculator</h1>
+      </div>
+      
+      
       <form id="ageCalculator">
-        <div class="form-group">
-          <label for="userAge">Enter Your Age:</label>
-          <input id="userAge" type="text" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="userExpectancy">Enter Your Average Life Expectancy for you Demographic:</label>
-          <input id="userExpectancy" type="text" class="form-control">
+        <div class="form-row">
+          <div class="col">
+            <input id="userAge" type="text" class="form-control" placeholder="Age">
+          </div>
+        
+          <div class="col">
+            <input id="userExpectancy" type="text" class="form-control" placeholder="Average Life Expectancy">
+          </div>
         </div>
         <button type="submit" class="btn btn-primary">Calculate</button>
       </form>
 
-      <div id="planetResults">
+      <div id="planetResults" >
         <div class="row">
           <div class="col-sm-6">
             <h3>Mercury</h3>
